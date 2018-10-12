@@ -1,0 +1,53 @@
+
+/**
+ * Create a Reducer First
+ * -> Simple JS Function
+ * -> Reducer must take two arg (Initial State like react state variable declaration,action )
+ * -> State can be any premitive literals 
+ * -> reducer must return default state
+ * -> Create Store object
+ */
+//Reducer
+/* function ReviewReducer(like=0, action){
+    if(action.type === "INCREMENT"){
+        return like+1;
+    }
+    return like
+} */
+
+/**
+ * Action
+ * Action is plain literal object 
+ * Action must contain type property
+ * Type property value must be name of action 
+ * name of the action is business logic name
+ */
+
+/**
+ * Dispatch
+ * It is method from store object
+ * It is used to call reducer
+ * appStore.dispatch() // Redux will call Review Reducer
+ * Dispatch Method takes action as paramter
+ */
+
+ React Readux Binding 
+ React-Redux lib provides:
+ 1.Provider - In built component, used to pass store object down to react layer.
+ 2.Connect - It is function used for mapping redux state to react prop 
+
+ /////////////////////////////////////////////////////////////
+//Mappers Redux State to React Prop Mapping
+/**
+ * Mappers are  just function
+ * The function must take arg
+ *    ->arg is Reducer reference-state
+ * The function must return object
+ *    ->object is mapper object
+ *          {
+ *             key:value
+ *  *          }
+ * key is React prop
+ * Value is Redux's state variable
+ * Lift is React,Right side is Redux
+ */
