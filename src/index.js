@@ -6,9 +6,14 @@ import {appStore} from './store/store';
 import {ReviewContainer} from './containers/reviewContainer';
 
 const MainApp = () => (
-    <Provider store={appStore}>
-      <ReviewContainer  />
-    </Provider>
+    <React.Fragment>
+        <nav className="navbar navbar-dark bg-dark">
+            <a className="navbar-brand" href="http://google.com">Navbar</a>
+        </nav>
+        <Provider store={appStore}>
+        <ReviewContainer  />
+        </Provider>
+    </React.Fragment>
 );
 
 render(<MainApp />, document.getElementById("root"));
