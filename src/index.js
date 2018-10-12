@@ -13,11 +13,20 @@ import "bootstrap/dist/css/bootstrap.css";
  * -> Create Store object
  */
 //Reducer
-function ReviewReducer(like=0, action){
+/* function ReviewReducer(like=0, action){
     if(action.type === "INCREMENT"){
         return like+1;
     }
     return like
+} */
+
+const ReviewReducer = (like=0, action) =>{
+    switch (action.type) {
+        case 'INCREMENT':
+            return like+1
+        default:
+            return like
+    }
 }
 //Create Store
 const appStore = createStore(ReviewReducer);
